@@ -1,6 +1,6 @@
 export interface Item {
     name: string;
-    value: string;
+    value: number;
   }
   
   export interface PurchaseList {

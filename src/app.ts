@@ -15,6 +15,6 @@ app.use(
 
 app.use(express.json());
 
-app.use("/api", purchaseListRoutes);
+app.use("/", purchaseListRoutes);
 
 export default app;
