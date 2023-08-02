@@ -17,4 +17,6 @@ router.get('/purchaseList/:purchaseListId', getPurchaseListById);
 router.delete('/purchaseList/:purchaseListId/:itemName', deleteListItem)
 router.delete('/purchaseList/:purchaseListId', deletePurchaseList)
 
+router.patch()
+
 export default router;

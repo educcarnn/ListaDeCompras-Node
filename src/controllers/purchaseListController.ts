@@ -53,7 +53,7 @@ export const updateListItem = (req: Request, res: Response) => {
     return res.status(404).json({ message: 'Item não encontrado na lista' });
   }
 
-  if (typeof newItemValue !== 'number') { // Correção aqui
+  if (typeof newItemValue !== 'number') { 
     return res.status(400).json({ message: 'Tipo do valor de entrada inválido' });
   }
 
@@ -92,3 +92,5 @@ export const deletePurchaseList = (req: Request, res: Response) =>{
   purchaseLists.splice(index, 1)
   return res.status(204).send()
 }
+
+export const 
