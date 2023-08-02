@@ -23,7 +23,7 @@ export const createPurchaseList = (req: Request, res: Response) => {
 
 export const getAllPurchaseLists = (req: Request, res: Response) => {
     return res.status(200).json(purchaseLists);
-  };
+};
 
 export const getPurchaseListById = (req: Request, res: Response) => {
     const id = parseInt(req.params.purchaseListId, 10);
@@ -79,4 +79,16 @@ export const deleteListItem = (req: Request, res: Response) => {
   
     list.items.splice(index, 1);
     return res.status(204).send();
-  };
+};
+
+export const deletePurchaseList = (req: Request, res: Response) =>{
+  const id = parseInt(req.params.purchaseListId, 10)
+  const index = purchaseLists.findIndex((item) => item.id === id)
+
+  if(index === -1){ 
+    return res.status(404).json({message: 'Lista não encontrada'})
+  }
+
+  purchaseLists.splice(index, 1)
+  return res.status(204).send()
+}

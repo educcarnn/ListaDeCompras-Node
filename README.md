@@ -6,5 +6,5 @@ Tarefas para serem criadas nessa aplicação de node:
 - GET - /purchaseList(x)
 - GET - /purchaseList/<purchaseListId>(x)
 - PATCH - /purchaseList/<purchaseListId>/<itemName>()
-- DELETE - /purchaseList/<purchaseListId>/<itemName>()
-- DELETE - /purchaseList/<purchaseListId>()
+- DELETE - /purchaseList/<purchaseListId>/<itemName>(x)
+- DELETE - /purchaseList/<purchaseListId>(x)
