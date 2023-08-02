@@ -39,7 +39,7 @@ export const getPurchaseListById = (req: Request, res: Response) => {
 export const updateListItem = (req: Request, res: Response) => {
   const id = parseInt(req.params.purchaseListId, 10);
   const itemName = req.params.itemName;
-  const newItemValue = req.body.value;
+  const newItemValue = parseFloat(req.body.value);
 
   const list = purchaseLists.find((item) => item.id === id);
 
@@ -53,7 +53,7 @@ export const updateListItem = (req: Request, res: Response) => {
     return res.status(404).json({ message: 'Item não encontrado na lista' });
   }
 
-  if (typeof newItemValue !== 'number') { 
+  if (isNaN(newItemValue)) { 
     return res.status(400).json({ message: 'Tipo do valor de entrada inválido' });
   }
 
@@ -92,5 +92,3 @@ export const deletePurchaseList = (req: Request, res: Response) =>{
   purchaseLists.splice(index, 1)
   return res.status(204).send()
 }
-
-export const 
