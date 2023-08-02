@@ -1,14 +1,23 @@
 Lista de Compras - API
-Bem-vindo à API de Lista de Compras! Essa API permite criar, visualizar, atualizar e excluir listas de compras.
+
+
+**Bem-vindo à API de Lista de Compras! Essa API permite criar, visualizar, atualizar e excluir listas de compras.**
+
+
+```
+Tecnologias usadas
+Node 
+TypeScript
+Express
+```
 
 Rotas Disponíveis
-
-
-POST /purchaseList
+```
+- POST /purchaseList
 Cria uma nova lista de compras.
+```
 
 
-Body
 JSON
 ```
 {
@@ -30,25 +39,32 @@ JSON
 }
 ```
 
-GET /purchaseList
+```
+- GET /purchaseList
 Obtém todas as listas de compras.
+```
 
 
-GET /purchaseList/:purchaseListId
+```
+- GET /purchaseList/:purchaseListId
 Obtém uma lista de compras específica pelo ID.
+```
 
+**Parâmetros de URL**
 
-Parâmetros de URL
+```
 purchaseListId (number) - O ID da lista de compras.
+```
 
-
-PUT /purchaseList/:purchaseListId
+```
+- PUT /purchaseList/:purchaseListId
 Atualiza uma lista de compras específica pelo ID.
+```
 
-
+```
 Parâmetros de URL
 purchaseListId (number) - O ID da lista de compras a ser atualizada.
-
+```
 
 JSON
 ```
@@ -71,16 +87,19 @@ JSON
 }
 ```
 
-
+```
 DELETE /purchaseList/:purchaseListId
 Exclui uma lista de compras específica pelo ID.
+```
 
-
+```
 Parâmetros de URL
 purchaseListId (number) - O ID da lista de compras a ser excluída.
+```
 
-
+```
 Executando o Projeto
 Clone o repositório do GitHub.
 Instale as dependências usando o comando npm install.
 Inicie o servidor usando o comando npm start.
+```
