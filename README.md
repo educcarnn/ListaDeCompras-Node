@@ -93,7 +93,7 @@ Exclui uma lista de compras específica pelo ID.
 ```
 
 ```
-Parâmetros de URL
+**Parâmetros de URL**
 purchaseListId (number) - O ID da lista de compras a ser excluída.
 ```
 
