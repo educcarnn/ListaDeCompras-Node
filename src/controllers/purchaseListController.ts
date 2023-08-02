@@ -53,7 +53,7 @@ export const getAllPurchaseLists = (req: Request, res: Response) => {
       return res.status(404).json({ message: 'Item não encontrado na lista' });
     }
   
-    if (typeof newItemValue !== 'string') {
+    if (typeof newItemValue !== 'number') { // Correção aqui
       return res.status(400).json({ message: 'Tipo do valor de entrada inválido' });
     }
   
