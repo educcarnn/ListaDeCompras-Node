@@ -9,7 +9,7 @@ Cria uma nova lista de compras.
 
 
 Body
-json
+JSON
 ```
 {
   "title": "feira",
@@ -50,8 +50,8 @@ Parâmetros de URL
 purchaseListId (number) - O ID da lista de compras a ser atualizada.
 
 
-Body
-json
+JSON
+```
 {
   "title": "feira",
   "items": [
@@ -69,6 +69,7 @@ json
     }
   ]
 }
+```
 
 
 DELETE /purchaseList/:purchaseListId
