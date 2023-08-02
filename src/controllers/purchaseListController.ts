@@ -53,14 +53,14 @@ export const getAllPurchaseLists = (req: Request, res: Response) => {
       return res.status(404).json({ message: 'Item não encontrado na lista' });
     }
   
-    if (typeof newItemValue !== 'number') { // Correção aqui
+    if (typeof newItemValue !== 'number') {
       return res.status(400).json({ message: 'Tipo do valor de entrada inválido' });
     }
   
     itemToUpdate.value = newItemValue;
     return res.status(200).json(list);
   };
-  
+
   export const deleteListItem = (req: Request, res: Response) => {
     const id = parseInt(req.params.purchaseListId, 10);
     const itemName = req.params.itemName;
